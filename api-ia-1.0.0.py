@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Memoria de conversación por usuario (usando un diccionario temporal)
 user_memory = {}
-enlace_apps = 'https://perfil-mt65.onrender.com'
+enlace_apps = 'https://perfil-ldpa.onrender.com'
 
 correct_words = [
 
