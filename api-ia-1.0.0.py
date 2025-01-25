@@ -399,6 +399,10 @@ default_responses = [
 def obtener_respuesta_default():
     return random.choice(default_responses)
 
+@app.route("/", methods=["GET"])
+def hello_world():
+    return "Hola desde Flask en Render"
+
 @app.route("/consultar", methods=["POST"])
 def main():
    data = request.json
@@ -411,11 +415,6 @@ def main():
    return jsonify({"respuesta": respuesta})
 if __name__ == "__main__":
    app.run(host="0.0.0.0", port=5000)
-   
-   
-@app.route("/", methods=["GET"])
-def hello_world():
-    return "Hola desde Flask en Render"
 #def main():
 #    print("Bienvenido al chatbot. Escribe 'salir' para terminar la conversación.")
 #    user_id = "usuario_terminal"
